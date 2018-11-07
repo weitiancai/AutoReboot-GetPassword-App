@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GetPassword</string>
+    <string name="send">发送</string>
+    <string name="read">读取最近的短信</string>
+    <string name="cancel">取消自动发送</string>
+    <string name="continueSend">恢复自动发送</string>
+    <string name="explainSwitch">是否启动自动发送功能</string>
+    <string name="app_title">闪讯密码助手</string>
+    <string name="get">显示密码</string>
+</resources>

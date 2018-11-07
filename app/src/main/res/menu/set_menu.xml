@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/explain"
+        app:showAsAction="never"
+        android:title="说明"/>
+    <!--<item-->
+        <!--android:id="@+id/menuColor"-->
+        <!--app:showAsAction="never"-->
+        <!--android:title="字体颜色(未实现)"/>-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/default_color"-->
+                <!--android:title="默认"-->
+                 <!--/>-->
+            <!--<item-->
+                <!--android:id="@+id/black"-->
+                <!--android:title="黑色"-->
+                <!--/>-->
+            <!--<item-->
+                <!--android:id="@+id/pink"-->
+                <!--android:title="粉色"-->
+                <!--/>-->
+            <!--<item-->
+                <!--android:id="@+id/blue"-->
+                <!--android:title="蓝色"-->
+                 <!--/>-->
+            <!--<item-->
+                <!--android:id="@+id/green"-->
+                <!--android:title="绿色"-->
+                 <!--/>-->
+
+        <!--</menu>-->
+    <!--<item-->
+        <!--android:id="@+id/menuSize"-->
+        <!--app:showAsAction="never"-->
+        <!--android:title="字体大小（未实现）"-->
+        <!--/>-->
+</menu>
