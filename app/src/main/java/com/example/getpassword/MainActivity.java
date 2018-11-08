@@ -2,6 +2,9 @@ package com.example.getpassword;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -12,12 +15,14 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -176,8 +181,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         showText();
 
 
-    }
 
+    }
+    //显示通知的通用函数组件
+    private NotificationManager getNotificationManager(){
+        return (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+    }
+    private Notification getNotification(String title, String content){
+        Intent intent = new Intent(this,MainActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(this,0,intent,0);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher));
+        builder.setContentIntent(pi);
+        builder.setContentTitle(title);
+        builder.setContentText(content);
+        return builder.build();
+
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -212,9 +233,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.explain:
-                tv.setText("本app适合购买了电信套餐的大学生。功能：可以定期（每隔25小时）" +
-                        "向106593005发送短信“mm”以获取密码并收到短信后提取密码显示在下方页面中。从此不用再手动获取密码啦！" +
-                        "左边有开关控制是否自动发送。单人开发，功能简单，不喜勿喷");
+                tv.setText(R.string.explainText);
             default:
                 break;
         }
@@ -390,7 +409,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editor.putString("password",password);
             editor.putString("time",time);
             editor.apply();
-            tv.setText("密码: "+password+"\n上次更新时间："+time);
+            showText();
+            getNotificationManager().notify(1,getNotification("闪讯助手密码更新","password:"+password));
         }
     }
     private void showText(){
@@ -452,4 +472,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //取消注册
         super.onDestroy();
     }
+
 }

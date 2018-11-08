@@ -5,6 +5,7 @@
     <string name="cancel">取消自动发送</string>
     <string name="continueSend">恢复自动发送</string>
     <string name="explainSwitch">是否启动自动发送功能</string>
-    <string name="app_title">闪讯密码助手</string>
+    <string name="app_title">闪讯助理</string>
     <string name="get">显示密码</string>
+    <string name="explainText">本app适合购买了闪讯电信套餐宽带网络的大学生。按‘发送’几秒后等待奇迹的发生! 功能：在不关机的情况下，android6.0以下手机可以定期（每隔29小时闪讯密码期限为28小时）向106593005发送短信“mm”以获取密码并收到短信后提取密码显示在下方页面中。android8.0以上在退出app后将不能再自动发送短信，（我只有这样两只手机~~~）不用再手动获取密码啦！左边有开关控制是否自动发送。</string>
 </resources>

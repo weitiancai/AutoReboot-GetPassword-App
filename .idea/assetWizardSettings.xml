@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="69" />
+                                                <entry key="scalingPercent" value="60" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,7 +34,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ea6d6c" />
+                                      <entry key="backgroundColor" value="abce6c" />
                                       <entry key="foregroundImage" value="D:\桌面\pngs\leaves.png" />
                                     </map>
                                   </option>
