@@ -138,7 +138,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="担任开发，功能简单，bug也有，不喜勿喷"
+            android:text="单人开发，功能简单，bug也有，不喜勿喷"
             android:textSize="15sp"
             android:textColor="#c2717896"/>
         <TextView

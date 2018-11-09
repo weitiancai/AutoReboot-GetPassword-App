@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
 
     public static final String destinationAddress = "106593005";
-//    public static final String destinationAddress ="10086";
     public static final String MESSAGE = "mm";
-   // public static final String MESSAGE ="查询余额";
+    //    public static final String destinationAddress ="10086";
+    // public static final String MESSAGE ="查询余额";
     private final String SENT_SMS_ACTION = "SENT_SMS_ACTION";
     private final String DELIVERED_SMS_ACTION = "DELIVERED_SMS_ACTION";
 
@@ -392,14 +392,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /*
      *调用系统短信接口发送短信
      */
-    // 对短信发送状态  广播接收器
-    //private SmsStatusReceiver mSmsStatusReceiver;
 
-    //对短信接受状态  广播接收器
-    //private SmsDelliveryStatusReceiver mSmsDeliveryStatusReceiver;
-    /*
-    * 用于接受password的接收器
-    * */
     class myReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {

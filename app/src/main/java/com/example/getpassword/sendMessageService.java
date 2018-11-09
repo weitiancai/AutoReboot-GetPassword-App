@@ -43,7 +43,7 @@ public class sendMessageService extends Service {
                 }
             }).start();
             AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-            int aDayMore = 29*60*60*1000;//一天又一个小时
+            int aDayMore = 29*60*60*1000;//一天又多个小时
 //            int aMinute = 60*1000;//测试用
             long triggerAtTime = System.currentTimeMillis()+aDayMore;
             Intent i = new Intent(this,sendMessageService.class);//这里搞错了，弄了两天
